@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_jessekerch_eratosthenes_1728503287950-pr-trigger-input-set
+  identifier: Build_jessekerch_eratosthenes_1728503287950prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_jessekerch_eratosthenes_1728503287950
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
