@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_jessekerch_eratosthenes_1728503287950
+  name: Build eratosthenes
+  orgIdentifier: default
+  projectIdentifier: default_project
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1728503266770
+        repoName: jessekerch/eratosthenes
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Arm64
+            os: MacOS
+          runtime:
+            spec: {}
+            type: Docker
+        type: CI
