@@ -1,0 +1,144 @@
+/* Ancient Greek-inspired page setup with brighter colors */
+body {
+  font-family: "Lora", serif; /* Clean serif font */
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff; /* Soft blue background */
+  color: #2e2e2e;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(
+    circle,
+    rgba(240, 248, 255, 1) 0%,
+    rgba(224, 236, 255, 1) 100%
+  );
+}
+
+/* Centered container with fresh blue and gold styling */
+.container {
+  max-width: 800px;
+  width: 100%;
+  padding: 40px;
+  background-color: #ffffff; /* Bright white background */
+  border: 4px solid #0057b8; /* Bold Greek blue border */
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  text-align: center;
+  position: relative;
+  font-size: 18px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect to make the container pop */
+.container:hover {
+  transform: scale(1.03); /* Slight scale on hover */
+}
+
+/* Greek meander pattern with gold on top and bottom */
+.container::before,
+.container::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 15px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #ffd700 0,
+    /* Gold meander pattern */ #ffd700 15px,
+    transparent 15px,
+    transparent 30px
+  );
+  position: absolute;
+  left: 0;
+}
+
+.container::before {
+  top: -25px;
+}
+
+.container::after {
+  bottom: -25px;
+}
+
+/* Stylized form elements with blue and gold accents */
+label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #0057b8; /* Deep blue accent color */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #0057b8; /* Blue border for inputs */
+  border-radius: 5px;
+  background-color: #f8fbff; /* Very light blue background */
+  font-family: "Lora", serif;
+  font-size: 16px;
+  color: #2e2e2e;
+  transition: border-color 0.3s ease;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Focus effect for inputs */
+input:focus,
+textarea:focus {
+  border-color: #ffd700; /* Gold border on focus */
+  outline: none;
+}
+
+/* Fresh, Ancient Greek-styled button */
+button {
+  padding: 12px 24px;
+  background-color: #0057b8; /* Deep blue button */
+  color: white;
+  border: 2px solid #ffd700; /* Gold border */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "Lora", serif;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #004490; /* Darker blue on hover */
+  transform: translateY(-3px); /* Button rises slightly on hover */
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Additional styles */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #0057b8;
+  font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+}
